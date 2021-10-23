@@ -5,15 +5,16 @@
   "main": "index.js",
   "scripts": {
     "start": "http-server",
-    "build": "babel src --out-dir ./dist",
+    "build": "babel hippy-hippo-esm.js -o ./dist/hippy-hippo-umd.js --presets=@babel/env",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "<xgui3783@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.15.7",
     "@babel/core": "^7.15.8",
+    "@babel/plugin-transform-modules-umd": "^7.14.5",
     "@babel/preset-env": "^7.15.8",
     "http-server": "^13.0.2"
   }

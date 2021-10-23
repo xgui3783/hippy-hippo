@@ -14,7 +14,7 @@
 <script>
 
 function generateNewName() {
-  const newName = HippyHippo.getNickName()
+  const newName = window.HippyHippo.HippyHippo.getNickName()
   const container = document.querySelector('#container')
   container.innerHTML += `<br>${newName}`
 }

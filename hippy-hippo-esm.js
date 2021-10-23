@@ -73,9 +73,9 @@ const _nouns = [
 ].map(v => v.toLowerCase())
 
 export class HippyHippo {
-  static getNickName(_n, adjectives=_adjectives, nouns=_nouns) {
+  static getNickName(_n, __adjectives, __nouns) {
     let n
-    if (typeof _n === 'undefined') {
+    if (typeof _n === 'undefined' || _n === null) {
       n = HippyHippo.getRandomId()
     } else {
       n = _n
@@ -86,6 +86,8 @@ export class HippyHippo {
     if (Number.isNaN(n)) {
       throw new Error('argument to getNickName cannot be NaN');
     }
+    const adjectives = __adjectives || _adjectives
+    const nouns = __nouns || _nouns
     // cast any non NaN number to uint32 integer... I think...
     const index = new Uint32Array(new Float32Array([n]).buffer)[0]
     const adjective = adjectives[index % adjectives.length]
