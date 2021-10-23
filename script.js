@@ -1,4 +1,4 @@
-import { HippyHippo } from './hippy-hippo.js'
+import { HippyHippo } from './hippy-hippo-esm.js'
 function generateNewName() {
   const newName = HippyHippo.getNickName()
   const container = document.querySelector('#container')
