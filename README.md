@@ -2,6 +2,8 @@
 
 Generate `{adjective} {animal}`.
 
+[Try on codepen]([](https://codepen.io/xgui3783/pen/vYJgXWR))
+
 ## Installation and import
 
 ### Node
